@@ -1,0 +1,103 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Quiz container */
+.quiz-container {
+  background: #1e1e2f;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Question */
+#question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Options */
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  background: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.option-btn:hover {
+  background: #444;
+}
+
+.option-btn.correct {
+  background-color: green;
+}
+
+.option-btn.wrong {
+  background-color: crimson;
+}
+
+/* Buttons */
+button#next-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+}
+
+button#next-btn:hover {
+  background-color: #0097a7;
+}
+
+/* Result box */
+#result-box.hidden {
+  display: none;
+}
+
+#result-box {
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #question {
+    font-size: 1.2rem;
+  }
+
+  .option-btn {
+    font-size: 0.95rem;
+  }
+
+  button#next-btn {
+    font-size: 0.95rem;
+  }
+}
